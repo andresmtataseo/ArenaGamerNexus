@@ -1,0 +1,642 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+*,
+ ::after,
+ ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    background-color: #000;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+a {
+    text-decoration: none
+
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h3 {
+    font-size: 30px;
+    color: #ffde59;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 16px;
+}
+
+.p-10px {
+    padding: 10px;
+}
+
+.contenedor {
+    padding: 80px;
+    max-width: 1000px;
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.current {
+    border-bottom: 2px solid #ffde59;
+}
+
+.boxLogo {
+    display: flex;
+    justify-content: center;
+}
+
+.boxLogo h1>small {
+    color: #ffde59;
+}
+
+#subir {
+    display: none;
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+}
+
+.irArriba {
+    display: block!important;
+    padding: 15px;
+    background: #ffde59;
+    border: 2px solid #ffde59;
+    font-size: 18px;
+    color: #5b0094;
+    cursor: pointer;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    bottom: 50px;
+    right: 2%;
+    z-index: 999;
+    transition: all 0.3s ease 0s!important;
+    transform: translateX(0);
+    animation: animacionScrollTo 0.7s ease-out;
+    opacity: 1!important;
+}
+
+.irArriba:hover {
+    background: transparent;
+    border: 2px solid #ffde59;
+    transition: all 0.3s ease 0s;
+    color: #ffde59;
+    padding: 15px;
+}
+
+@keyframes animacionScrollTo {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+
+/* ESTILOS HEADER */
+
+header {
+    height: 700px;
+    width: 100%;
+    position: relative;
+}
+
+.boxHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+.boxHeader .textosHeader {
+    position: relative;
+    z-index: 1; /* Asegura que el texto esté sobre el video */
+    text-align: center;
+    transform: translateY(0);
+    opacity: 1;
+    animation: animacion2 1s ease-out;
+    width: 50%;
+}
+
+.boxHeader .textosHeader h1 {
+    font-size: 60px;
+}
+
+.boxHeader .textosHeader p {
+    color: #fff;
+    font-size: 20px;
+}
+
+a.botonGetStarted {
+    display: inline-block;
+    width: 135px;
+    text-align: center;
+    margin-top: 20px;
+    color: #5b0094;
+    padding: 8px 20px;
+    background-color: #ffde59;
+    border-radius: 15px;
+    border: 2px solid #5b0094;
+    box-shadow: 0px 5px 18px rgba(0, 0, 0, .2);
+    transition: all 0.3s ease 0s;
+}
+
+a.botonGetStarted:hover {
+    color: #ffde59 !important;
+    background-color: transparent;
+    border-radius: 6px;
+    transition: all 0.3s ease 0s;
+    box-shadow: 0px 15px 18px rgba(217, 231, 11, 0.4);
+    transform: translateY(-6px);
+}
+
+.boxHeader .imgHeader {
+    position: absolute; /* Cambiado a absoluto */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Asegura que el video esté detrás del texto */
+}
+
+.imgHeader video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: animacion1 1s ease-out;
+}
+
+@keyframes animacion1 {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+@keyframes animacion2 {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+
+/* ESTILOS NAVBAR */
+
+.navbar {
+    box-shadow: 0 2px 2px -2px #dcdcdc;
+}
+
+.navbar-brand {
+    display: none;
+}
+
+.navbar-brand small {
+    color: #ffde59;
+}
+
+.nav-link {
+    color: #ffffffd3!important;
+}
+
+.nav-link:hover {
+    border-bottom: 2px solid #ffde59;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-light .navbar-toggler {
+    color: rgba(0, 0, 0, 1);
+}
+
+.bg-light {
+    background-color: transparent!important;
+}
+
+
+/* ESTILOS FEATURES */
+
+.boxFeatures {
+    padding: 80px;
+    background-color: #000;
+    height: 100vh;
+}
+
+.features {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+.cardFeatures {
+    background: #1c1d1c;
+    width: 30%;
+    border-radius: 3px;
+    padding: 1.25rem;
+    transition: 0.4s;
+    margin-bottom: 20px;
+}
+
+.cardFeatures span {
+    box-shadow: 0px 3px 16px rgba(0, 0, 0, 0.2);
+}
+
+.cardFeatures a {
+    color: #ffde59;
+}
+
+.cardFeatures:hover {
+    cursor: pointer;
+    transform: scale(0.9, 0.9);
+}
+
+.cardFeatures span {
+    background: #5b0094;
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    margin-bottom: 1rem;
+}
+
+.cardFeatures h4 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.cardFeatures p {
+    font-size: 12px;
+    color: #ffffffd3;
+}
+
+
+/* ESTILOS ABOUT */
+
+.boxAbout {
+    padding: 80px;
+    background-color: #000;}
+
+.about {
+    padding: 80px 0;
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.imgAbout {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 25px;
+}
+
+.imgAbout img {
+    width: 80%;
+    max-width: 400px;
+    max-height: 400px;
+}
+
+.contenidoAbout {
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 25px;
+}
+
+.contenidoAbout h3 {
+    font-size: 30px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.contenidoAbout p {
+    margin-bottom: 10px;
+    width: 80%;
+    color: #9c9c9c;
+}
+
+
+
+/* ESTILOS CONTACTO */
+
+.boxContacto {
+    padding: 80px;
+    background-color: #000;
+    height: 100%;
+}
+
+.contacto {
+    background: #1c1d1c;
+    color: #fff;
+    border-radius: 15px;
+    padding: 50px 40px;
+    width: 42%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.botonEnviarMensaje {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    color: #ffde59;
+    padding: 8px 20px;
+    background-color: transparent;
+    border: 1px solid #ffde59;
+    border-radius: 6px;
+    box-shadow: 0px 5px 18px rgba(0, 0, 0, .2);
+    transition: all 0.3s ease 0s;
+}
+
+.botonEnviarMensaje:hover {
+    color: #ffde59 !important;
+    background-color: transparent;
+    border: 2px solid #ffde59;
+    border-radius: 6px;
+    transition: all 0.3s ease 0s;
+    box-shadow: 0px 15px 18px #ffde5977;
+    transform: translateY(-6px);
+}
+
+.form-control {
+    font-size: 14px;
+}
+
+
+/*  ESTILOS FOOTER*/
+
+.footer {
+    background: #1c1d1c;
+    padding: 25px;
+}
+
+.boxTextFooter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxTextFooter p {
+    margin-bottom: 0;
+    color: #666666;
+}
+
+.boxTextFooter p a {
+    color: #666666;
+}
+
+.boxTextFooter p a:hover {
+    color: #ffde59;
+    transition: 0.4s;
+}
+
+.boxTextFooter span {
+    color: #20be6b;
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width:800px) {
+    .boxLogo {
+        display: none;
+    }
+    /* ESTILOS NAVBAR */
+    .navbar-brand {
+        display: block;
+    }
+    .nav-link:hover {
+        border-bottom: none;
+    }
+    .nav-item {
+        text-align: center;
+    }
+    .current {
+        border-bottom: 2px solid #f5f5f5;
+    }
+    /* ESTILOS HEADER */
+    header {
+        height: auto;
+    }
+    .boxHeader {
+        flex-wrap: wrap;
+        height: 900px;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .boxHeader .textosHeader {
+        width: 90%;
+        margin-bottom: 100px;
+        text-align: left;
+        left: 0;
+        margin: 0 auto;
+    }
+    .boxHeader h1 {
+        font-size: 40px;
+    }
+    .boxHeader .textosHeader h1 {
+        width: 100%;
+    }
+    .boxHeader .textosHeader p {
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+    }
+    .boxHeader .imgHeader {
+        width: 100%;
+        top: -40px;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .imgHeader img {
+        width: 95%;
+    }
+    /* ESTILOS FEATURES */
+    .boxFeatures {
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    .features {
+        width: 90%;
+    }
+    .cardFeatures {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    /* ESTILOS CALL TO ACTIONS */
+    .boxCallToActions {
+        height: 100%;
+    }
+    .imgCallToActions {
+        width: 100%;
+    }
+    .contenido {
+        width: 80%;
+        padding-left: 0px;
+    }
+    .contenido h3 {
+        text-align: center;
+    }
+    .contenido p {
+        width: 100%;
+        text-align: center;
+    }
+    .contenido ul {
+        text-align: center;
+    }
+    .boxCardAnimated {
+        position: relative;
+        right: 0vh;
+        transform: none;
+        animation: none;
+    }
+    .boxCardCallToActions {
+        width: 100%;
+        margin-top: 42px;
+    }
+    /* ESTILOS ABOUT */
+    .boxAbout {
+        height: 100%;
+    }
+    .about {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .imgAbout {
+        width: 100%;
+    }
+    .contenidoAbout {
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+        margin-top: 40px;
+    }
+    .contenidoAbout h3 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .contenidoAbout p {
+        width: 100%;
+        text-align: center;
+    }
+    /* ESTILOS TESTIMONIAL */
+    .boxSlider {
+        height: 100%;
+    }
+    /* ESTILOS CONTACTO */
+    .contacto {
+        background: white;
+        width: 90%;
+        margin: 30px auto 0 auto;
+    }
+    /* ESTILOS FOOTER */
+    .boxContacto {
+        height: 100%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .boxLogo {
+        display: none;
+    }
+    .current {
+        border-bottom: 2px solid #f5f5f5;
+    }
+    h3 {
+        font-size: 25px;
+    }
+    /* ESTILOS NAVBAR */
+    .navbar-brand {
+        display: block;
+    }
+    .nav-link:hover {
+        border-bottom: none;
+    }
+    .nav-item {
+        text-align: center;
+    }
+    /* ESTILOS HEADER */
+    .boxHeader {
+        height: 700px;
+    }
+    .boxHeader .textosHeader {
+        width: 90%;
+    }
+    .boxHeader h1 {
+        font-size: 25px;
+    }
+    .boxHeader h2 {
+        font-size: 20px;
+        font-weight: 300;
+    }
+    /* ESTILOS FEATURES */
+    .features {
+        width: 100%;
+    }
+    /* ESTILOS CALL TO ACTIONS */
+    .boxCallToActions {
+        height: 100%;
+    }
+    .boxCardAnimated {
+        position: relative;
+        right: 0vh;
+        transform: none;
+        animation: none;
+    }
+    /* ESTILOS ABOUT */
+    .about {
+        width: 100%;
+    }
+    /* ESTILOS CONTACTO */
+    .boxContacto {
+        padding: 50px 30px;
+    }
+    .contacto {
+        width: 100%;
+        margin: 0;
+    }
+    /* ESTILOS FOOTER */
+    footer {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
