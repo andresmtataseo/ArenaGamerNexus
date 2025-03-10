@@ -201,12 +201,25 @@ a.botonGetStarted:hover {
 
 /* ESTILOS NAVBAR */
 
-.navbar {
-    box-shadow: 0 2px 2px -2px #dcdcdc;
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    font-weight: bold;
+    color: #ffde59 !important; /* Color del texto */
+    font-family: 'Poppins', sans-serif; /* Fuente */
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-.navbar-brand {
-    display: none;
+.navbar-brand img {
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover img {
+    transform: rotate(15deg);
 }
 
 .navbar-brand small {
@@ -239,7 +252,6 @@ a.botonGetStarted:hover {
 .boxFeatures {
     padding: 80px;
     background-color: #000;
-    height: 100vh;
 }
 
 .features {
@@ -272,7 +284,7 @@ a.botonGetStarted:hover {
 
 .cardFeatures:hover {
     cursor: pointer;
-    transform: scale(0.9, 0.9);
+    transform: scale(1.1, 1.1);
 }
 
 .cardFeatures span {
@@ -288,13 +300,13 @@ a.botonGetStarted:hover {
 }
 
 .cardFeatures h4 {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: bold;
     color: #fff;
 }
 
 .cardFeatures p {
-    font-size: 12px;
+    font-size: 16px;
     color: #ffffffd3;
 }
 
