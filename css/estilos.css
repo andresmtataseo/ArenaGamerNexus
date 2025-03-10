@@ -134,6 +134,7 @@ header {
     opacity: 1;
     animation: animacion2 1s ease-out;
     width: 50%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .boxHeader .textosHeader h1 {
@@ -201,8 +202,39 @@ a.botonGetStarted:hover {
 
 /* ESTILOS NAVBAR */
 
+/* Estilos para los iconos de redes sociales */
+.social-icons {
+    display: flex;
+    width: 33%;
+    justify-content: flex-end;
+    margin-left: 20px;
+    margin-right: 20px; /* Espacio entre los enlaces y los iconos */
+}
+
+.social-icon {
+    color: #ffffffd3; /* Color de los iconos */
+    font-size: 24px; /* Tamaño de los iconos */
+    margin: 0 10px; /* Espacio entre los iconos */
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #ffde59; /* Color al hacer hover */
+    transform: translateY(-3px); /* Efecto de elevación */
+}
+
+/* Estilos para los iconos (si usas una librería como FontAwesome o Icomoon) */
+.icon-instagram::before {
+    content: "\e900"; /* Código del icono de Instagram */
+}
+
+.icon-whatsapp::before {
+    content: "\e901"; /* Código del icono de WhatsApp */
+}
+
 .navbar-brand {
     display: flex;
+    width: 33%;
     align-items: center;
     margin-left: 20px;
     font-weight: bold;
